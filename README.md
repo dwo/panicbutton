@@ -21,13 +21,14 @@ convenience, I used [homebrew](https://github.com/mxcl/homebrew).
   
     brew install libusb
 
-I ran Python 2.7.2 through [virtualenv](https://github.com/pypa/virtualenv). Then,
-I got some [PyUSB](https://github.com/walac/pyusb)
+I installed Python 2.7.2 through [virtualenv](https://github.com/pypa/virtualenv). Then,
+I got the [PyUSB](https://github.com/walac/pyusb) module. Version 1.0.0a2 to be 
+precise.
 
     pip install pyusb
 
-After hacking about on Ken's script for a while
+Run the script
 
     python panicbutton.py
 
-will print "NUKE'D" when you press the panic button.
+And watch it print "NUKE'D" when you press the panic button.
