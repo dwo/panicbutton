@@ -1,9 +1,14 @@
 import usb.core
 import time
+import json
 
-print "Panic Button time! Press Ctrl-C to quit."
+def read_command():
+    f = open('/tmp/panicbutton/config.json')
+    config = json.load(f)
+    f.close()
+    return config['command']
 
-def read(device):
+def pressed(device):
     """ Read the USB device
     Return 1 if pressed and released, 0 otherwise.
     """
@@ -23,6 +28,7 @@ def read(device):
 #    Speed:         Up to 1.5 Mb/sec
 device = usb.core.find(idVendor=0x1130, idProduct=0x0202)
 
+print "Panic Button time! Press Ctrl-C to quit."
 print "Looking for the Panic Button... please wait"
 # loop until device is found
 while 1:
@@ -38,11 +44,13 @@ while 1:
     break
 
 # do an initial read to clear out any stale button presses
-read(device)
+pressed(device)
 
 if __name__ == "__main__":
-    while 1:
-        if read(device):
-            print "NUKE'D"
-        time.sleep(.15)
-
+    try:
+        while 1:
+            if pressed(device):
+                print "Command to execute: " + read_command()
+            time.sleep(.15)
+    except KeyboardInterrupt, e:
+        exit(0)
