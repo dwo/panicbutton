@@ -11,7 +11,7 @@ Shout Outs
 Shamelessly learned what calls to make from [Ken Shirriff's experiences on Linux](http://www.arcfn.com/2010/04/usb-panic-button-with-linux-and-python.html)
 who also copied some magic number knowledges from [Benjamin Kendinibilir's adventures in Perl](http://search.cpan.org/~bkendi/Device-USB-PanicButton-0.04/lib/Device/USB/PanicButton.pm).
 
-@morland provided moral support and Python tips.
+[morland](https://github.com/morland) provided moral support and Python tips.
 
 What I done to make it run
 --------------------------
