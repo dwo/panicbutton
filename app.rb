@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'json'
-$conf_file = File.expand_path('../config.json', __FILE__)
+$conf_file = '/tmp/panicbutton/config.json'
 
 if File.file? $conf_file
   $config = JSON.parse(File.read $conf_file)
