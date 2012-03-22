@@ -28,6 +28,6 @@ I got some [PyUSB](https://github.com/walac/pyusb)
 
 After hacking about on Ken's script for a while
 
-    python hello.py
+    python panicbutton.py
 
 will print "NUKE'D" when you press the panic button.
