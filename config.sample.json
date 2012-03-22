@@ -1,6 +1,8 @@
 {
   "presets": {
-    "custom": ""
+    "custom": "",
+    "deploy to staging": "curl -X POST 'http://of1-dev-ci/job/$1.deploy-to-staging/buildWithParameters' -d 'BRANCH=master'",
+    "deploy to production": "curl -X POST 'http://of1-dev-ci/job/$1.deploy-to-production/build'"
   },
   "preset": "custom",
   "argument": "",
