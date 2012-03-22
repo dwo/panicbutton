@@ -2,15 +2,16 @@ USB Panic Button
 ================
 
 I got given a [USB Panic Button](http://www.firebox.com/product/1742/USB-Panic-Button)
-for christmas a few years ago.
-
-I'm trying to make it do things on Mac OSX with Python.
+for christmas a few years ago. I'm trying to make it do things on Mac OSX with 
+Python.
 
 Shout Outs
 ----------
 
 Shamelessly learned what calls to make from [Ken Shirriff's experiences on Linux](http://www.arcfn.com/2010/04/usb-panic-button-with-linux-and-python.html)
 who also copied some magic number knowledges from [Benjamin Kendinibilir's adventures in Perl](http://search.cpan.org/~bkendi/Device-USB-PanicButton-0.04/lib/Device/USB/PanicButton.pm).
+
+@morland provided moral support and Python tips.
 
 What I done to make it run
 --------------------------
@@ -32,3 +33,9 @@ Run the script
     python panicbutton.py
 
 And watch it print "NUKE'D" when you press the panic button.
+
+We need to go deeper
+--------------------
+
+If you really want to understand what's going on in USB land, I gained some 
+insight from [USB in a NutShell](http://www.beyondlogic.org/usbnutshell/usb1.shtml).
