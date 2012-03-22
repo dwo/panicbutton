@@ -19,7 +19,7 @@ What I done to make it run
 I used [libusb](http://sourceforge.net/projects/libusb/) but it's possible that 
 [OpenUSB](http://sourceforge.net/projects/openusb/) would work too. For 
 convenience, I used [homebrew](https://github.com/mxcl/homebrew).
-  
+
     brew install libusb
 
 I installed Python 2.7.2 through [virtualenv](https://github.com/pypa/virtualenv). Then,
@@ -31,8 +31,6 @@ precise.
 Run the script
 
     python panicbutton.py
-
-And watch it print "NUKE'D" when you press the panic button.
 
 We need to go deeper
 --------------------
