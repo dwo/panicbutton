@@ -1,9 +1,11 @@
 import usb.core
 import time
 import json
+import os
 
 def read_command():
-    f = open('/tmp/panicbutton/config.json')
+    home = os.path.expanduser('~')
+    f = open(home + '/.panicbutton/config.json')
     config = json.load(f)
     f.close()
     return config['command']
