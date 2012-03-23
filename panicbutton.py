@@ -2,6 +2,7 @@ import usb.core
 import time
 import json
 import os
+import subprocess
 
 def read_command():
     home = os.path.expanduser('~')
@@ -52,7 +53,9 @@ if __name__ == "__main__":
     try:
         while 1:
             if pressed(device):
-                print "Command to execute: " + read_command()
+                shell_command = read_command()
+                print "Executing command: " + shell_command
+                subprocess.call(shell_command.split(' '))
             time.sleep(.15)
     except KeyboardInterrupt, e:
         exit(0)
