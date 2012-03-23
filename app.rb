@@ -1,5 +1,8 @@
 require 'rubygems'
+$LOAD_PATH.unshift(File.expand_path('../vendor/gems/bundler-1.1.0/lib', __FILE__))
+require 'bundler/setup'
 require 'json'
+
 $conf_file = '/tmp/panicbutton/config.json'
 
 if File.file? $conf_file
